@@ -315,7 +315,13 @@ body{
     padding-top: 10px;
     border: 2px solid white;
     text-decoration: none;
+    transition: .5s ease;
 }   
+
+.more:hover{
+    background-color: white;
+    color: black;
+}
 
 
 iframe{

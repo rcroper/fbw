@@ -2,427 +2,146 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 
+/* main section starts here*/
 
-.btn4:hover{
-    color: rgba(255, 255, 255, 0.479);
-    
-}
-
-.hero{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.795)), url(herobg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.main{
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;  
-    height: 100vh;
-    width: 100vw; 
+    background-color: #1A0808;
     position: relative;
-    overflow:hidden;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.open{
-    right: 0;
+.video{
+    
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: .2;
 }
 
-.mobile{
+.header{
+    height: 90px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.main h1{
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    z-index: 5;
+}
+
+.main h2{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    z-index: 5;
+}
+
+.maincta{
+    margin-top: 70px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 450px;
-    width: 300px;
-    position: absolute;
-    top: 0;
-    right: -300px;
-    background-color: white;
-    flex-direction: column;
-    transition: .5s ease;
+    width: 500px;
+    z-index: 4;
+
 }
 
-.mobilelink{
+.cta1{
+    background-color: black;
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    display: block;
+    padding: 10px 20px;
+    transition: .7s ease;
+}
+
+.cta1:hover{
     color: black;
-    font-size: 19px;
+    background-color: white;
+}
+
+.cta2{
+    
+    font-size: 1.1rem;
+    color: white;
     text-decoration: none;
-    transition: .5s ease;
-
+    border: 2px solid rgba(255, 255, 255, 0.514);
+    display: block;
+    padding: 10px 20px;
+    transition: .7s ease;
 }
 
-.mobilelink:hover{
-    opacity: .5;
-}
-
-.btn4{
-    
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    
-    
-    z-index: 5;
-    text-decoration: none;
-    transition: .5s;
-    transform: translateY(30px) translateX(15px) rotate(-30deg);
-   
-}
-
-.newwrap{
-    height: 230px;
-    width: 230px;
-    background-color: rgb(54, 12, 12);
-    position: fixed;
-    top: -100px;
-    left: -50px;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fas{
-    cursor: pointer;
-   font-size: 25px;
-   color: white;
-    position: absolute;
-    right: 40px;
-    top: 40px;
-}
-
-
-
-.herowrap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.hero h1{
-    color: white;
-    font-size: 35px;
-    text-align: center;
-    margin-bottom: 3px;
-    margin-top: 6px;
-}
-
-.hero h2{
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 3px;
-}
-
-.hero h4{
-    color: white;
-    font-size: 19px;
-    text-align: center;
-    margin-bottom: 1px;
+.cta2:hover{
+    background-color: white;
+    color: black;
 }
 
 .logo{
-    height: 150px;
-    width: auto;
+    height: 160px;
+    width: 170px;
+    margin-left: 20px;
+    
 }
 
-.btnwrap{
-    height: 80px;
-    width: 400px;
+/* menu button sytles start here--------------->*/
+
+.menu{
+    height: 40px;
+    width: 50px;
     
+    margin-right: 20px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    transform: translateY(60px);
-   
-
-}
-
-
-
-.btn1{
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    transition: .5s ease;
-    border: 2px solid white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-.btn1:hover{
-    background-color: white;
-    color: black;
-}
-
-.btn2:hover{
-    background-color: white;
-    color: black;
-}
-
-.btn2{
-    transition: .5s ease;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-
-
-
-
-
-/*---------------- About ----------------------*/
-
-
-.about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+    align-items: flex-end;
     flex-direction: column;
-    height: 350px;
-    width: 100vw;
+    cursor: pointer;
 }
 
-.about h2{
-    color: rgb(63, 63, 63);
-    font-size: 30px;
-    text-align: center;
-
-}
-
-.about p{
-    font-size: 19px;
-    line-height: 27px;
-    text-align: center;
-    width: 80%;
-    color: rgb(48, 48, 48);
-}
-
-
-
-/*--------------------vbs Section ------------------*/
-
-.vbs{
-    height: 350px;
-    width: 100vw;
-    background-image: linear-gradient(rgba(46, 190, 106, 0.541),rgba(35, 165, 78, 0.568)), url(vbsbg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.vbs h1{
-    color: rgb(255, 255, 255);
-    font-size: 35px;
-    text-align: center;
-    margin-bottom: 3px;
-}
-
-.vbs p{
-    margin-top: 3px;
-    color: rgb(255, 255, 255);
-    font-size: 19px;
-    line-height: 24px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.prereg{
-    color: rgb(255, 255, 255);
-    font-size: 19px;
-    border: 2px solid rgb(255, 255, 255);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: .5s;
-
-}
-
-.prereg:hover{
+.line1{
     background-color: white;
-    color: rgb(44, 44, 44);
-}
-
-
-
-/*--------------- Latest --------------------*/
-
-.latest {
-    height: 650px;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgb(10, 2, 2);
-}
-
-
-.latest h1{
-    margin: 0;
-    color: white;
-    font-size: 30px;
-    text-align: center;
-
-}
-
-.latest h2{
-    margin: 2px;
-    color: white;
-    font-size: 25px;
-    text-align: center;
-
-}
-
-.latest h3{
-    margin-top: 3px;
-    margin-bottom: 45px;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-
-}
-
-.more{
-    margin-top: 50px;
-    color: white;
-    font-size: 19px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    border: 2px solid white;
-    text-decoration: none;
-    transition: .5s ease;
-}   
-
-.more:hover{
-    background-color: white;
-    color: black;
-}
-
-
-iframe{
-    border: 5px solid white;
-}
-
-/*--------------footer styles -------------------*/
-
-.footer{
-    height: 80px;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-}
-
-.footer h1{
-    font-size: 20px;
-    color: white;
-    text-align: center;
-}
-
-@media (max-width: 375px) {
-    .hero h1{
-        font-size: 30px;
-    }
-
-    .herowrap{
-        transform: translateY(70px);
-    }
-
-   
-
-    .logo{
-        height: 120px;
-    }
-
-    .btn4{
-        top: 40px;
-        left: 40px;
-    }
-
-    .btn2{
-        padding-right: 110px;
-        padding-left: 110px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    .btn1{
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-right: 80px;
-        padding-left: 80px;
-    }
-
-    .btnwrap{
-        
-        background-color: transparent;
-        height: auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        flex-direction: column;
-        height: 400px;
-        width: 100vw;
-    }
-
+    height: 2px;
     
+    width: 30px;
 
-    .about{
-        
-        height: auto;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        align-items: flex-start;
-        overflow: hidden;
-        
-    }
+}
+.line2{
+    background-color: white;
+    height: 2px;
+    
+    width: 20px;
 
-    .about p{
-        transform: translateX(10px);
-        text-align: left;
-    }
+}
+.line3{
+    background-color: white;
+    height: 2px;
+    
+    width: 30px;
 
-    .about h2{
-        transform: translateX(20px);
-    }
-
-    .newwrap{
-        display: none;
-    }
-
-   iframe{
-       width: 90%;
-       height: 200px;
-   }
-
-   .vbs h1{
-       font-size: 30px;
-   }
 }
 
-    
+/*------------End Header and Main styles-----------------------*/
